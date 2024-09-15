@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input[type=password]::-webkit-outer-spin-button,
+input[type=password]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=password] {
+  appearance: none;
+}
