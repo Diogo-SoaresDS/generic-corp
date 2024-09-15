@@ -1,6 +1,8 @@
 import Local from './assets/local.png'
 import Logo from './assets/logo.png'
 import LogoGoogle from './assets/google-logo.png'
+import Button from './components/Button'
+import Form from './components/Form'
 
 export default function App() {
     return (
@@ -10,42 +12,18 @@ export default function App() {
             </aside>
 
             <section>
-                <header>
+                <div>
                     <img src={Logo} alt="Logo Generic Corp" />
                     <span>Generic Corp</span>
-                </header>
-                
-                <div>
-                    <h1>Nice to see you again</h1>
-                    
-                    <form>
-                        <div>
-                            <label htmlFor="login">Login</label>
-                            <input type="text" id="login" name="login" placeholder="Email or phone number" />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Enter password" />
-                        </div>
-                        <div>
-                            <label htmlFor="toggle">
-                                <input type="checkbox" name="toggle" id="toggle" />
-                                <span>Remember me</span>
-                            </label>
-                            <p>
-                                <a href="#">Forgot password?</a>
-                            </p>
-                        </div>
-                        <button type="submit">Sign in</button>
-                    </form>
                 </div>
-
+                
+                <Form />
                 <hr />
                 <div>
-                    <button>
+                    <Button>
                         <img src={LogoGoogle} alt="Logo Google" />
                         <span>Or sign in with Google</span>
-                    </button>
+                    </Button>
 
                     <p>
                         Dont have an account?
