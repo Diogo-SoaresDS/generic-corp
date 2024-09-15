@@ -4,9 +4,9 @@ import FormGroup from "./FormGroup"
 
 export default function Form() {
     return (
-        <div>
-            <h1>Nice to see you again</h1>
-            <form>
+        <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-xl">Nice to see you again</h1>
+            <form className="flex flex-col gap-3 mt-3">
                 <FormGroup 
                     label="Login" 
                     type="text" 
@@ -16,12 +16,12 @@ export default function Form() {
                 <FormGroup 
                     label="Password" 
                     type="password" 
-                    name="password" 
+                    name="password"
                     placeholder="Enter password" 
                 />
             </form>
             <RememberMe />
-            <Button>Sign in</Button>
+            <Button className="w-full bg-blue-500 font-bold text-slate-50">Sign in</Button>
         </div>
     )
 }
