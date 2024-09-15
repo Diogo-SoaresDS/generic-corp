@@ -11,7 +11,7 @@ export default function FormGroup({ label, type, name, placeholder }) {
 
     return (
         <div className="relative flex flex-col">
-            <label className="text-xs ml-4 font-medium text-gray-500 mb-1" htmlFor={name}>
+            <label className="text-xs ml-4 hidden md:block lg:block font-medium text-gray-500 mb-1" htmlFor={name}>
                 {label}
             </label>
             <input
@@ -24,13 +24,13 @@ export default function FormGroup({ label, type, name, placeholder }) {
             {type === 'password' && (
                 <button
                     type="button"
-                    className="absolute inset-y-0 right-0 pr-5 pt-5 flex items-center cursor-pointer"
+                    className="absolute inset-y-0 right-0 pr-3 pt-1 md:pr-5 md:pt-5 flex items-center cursor-pointer"
                     onClick={togglePasswordVisibility}
                 >
                     <img
                         src={isPasswordVisible ? EyeOffIcon : EyeIcon}
                         alt={isPasswordVisible ? 'Hide password' : 'Show password'}
-                        className="h-6 w-6 text-gray-500"
+                        className="h-5 w-5 text-gray-500"
                     />
                 </button>
             )}

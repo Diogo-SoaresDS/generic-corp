@@ -6,33 +6,37 @@ import Form from './components/Form'
 
 export default function App() {
     return (
-        <main className="w-screen h-screen grid grid-cols-3 grid-rows-6">
-            <aside className="row-span-6 col-span-2">
-                <img className="h-full w-full" src={Local} alt="Local" />
-            </aside>
+        <main className="flex justify-center items-center w-screen h-screen">
+            <div className="h-full w-full grid sm:grid-cols-1 lg:w-full lg:grid-cols-3 md:w-3/5 md:items-center grid-rows-6">
+                <aside className="row-span-6 col-span-2 hidden md:col-span-1 lg:block lg:h-full lg:col-span-2">
+                    <img className="w-full h-full object-cover" src={Local} alt="Local" />
+                </aside>
 
-            <section className="row-span-6 flex justify-center items-center flex-col">
-                <div className="w-[70%]">
-                    <div className="flex items-center mb-6">
-                        <img className="w-12" src={Logo} alt="Logo Generic Corp" />
-                        <span className="font-bold text-lg ml-2">Generic Corp</span>
-                    </div>
-                    
-                    <Form />
-                    <hr className="border-y-[1px] border-gray-100" />
-                    <div className="text-center">
-                        <Button className="flex gap-2 items-center justify-center bg-gray-800 text-slate-50 w-full">
-                            <img className="w-4" src={LogoGoogle} alt="Logo Google" />
-                            <span className="text-sm">Or sign in with Google</span>
-                        </Button>
+                <section className="row-span-6 flex justify-center">
+                    <div className="w-[90%] h-full flex flex-col-reverse md:flex-col xl:w-[70%]">
+                        <header className="flex items-center mb-12 justify-center md:justify-start">
+                            <img className="w-12" src={Logo} alt="Logo Generic Corp" />
+                            <span className="font-bold text-sm md:text-lg ml-2">Generic Corp.</span>
+                        </header>
+                        
+                        <div className="h-full flex flex-col justify-center">
+                            <Form />
+                            <hr className="border-y-[1px] border-gray-100" />
+                            <div className="text-center">
+                                <Button className="flex gap-2 items-center justify-center bg-gray-800 text-slate-50 w-full">
+                                    <img className="w-4" src={LogoGoogle} alt="Logo Google" />
+                                    <span className="text-sm">Or sign in with Google</span>
+                                </Button>
 
-                        <p className="text-sm font-[600]">
-                            Dont have an account?
-                            <a className="text-blue-500 ml-2" href="#"> Sign up now</a>
-                        </p>
+                                <p className="text-sm font-[600]">
+                                    Dont have an account?
+                                    <a className="text-blue-500 ml-2" href="#"> Sign up now</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     )
 }
