@@ -21,7 +21,7 @@ export default function Form() {
                 />
             </form>
             <RememberMe />
-            <Button className="w-full bg-blue-500 font-bold text-slate-50">Sign in</Button>
+            <Button className="w-full bg-blue-600 font-bold text-slate-50 transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700">Sign in</Button>
         </div>
     )
 }

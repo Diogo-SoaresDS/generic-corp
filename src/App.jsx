@@ -23,14 +23,14 @@ export default function App() {
                             <Form />
                             <hr className="border-y-[1px] border-gray-100" />
                             <div className="text-center">
-                                <Button className="flex gap-2 items-center justify-center bg-gray-800 text-slate-50 w-full">
+                                <Button className="flex gap-2 items-center justify-center bg-gray-800 text-slate-50 w-full transition-transform duration-300 transform hover:scale-105 hover:bg-gray-950">
                                     <img className="w-4" src={LogoGoogle} alt="Logo Google" />
                                     <span className="text-sm">Or sign in with Google</span>
                                 </Button>
 
-                                <p className="text-sm font-[600]">
+                                <p className="text-sm font-medium">
                                     Dont have an account?
-                                    <a className="text-blue-500 ml-2" href="#"> Sign up now</a>
+                                    <a className="text-blue-700 ml-2" href="#"> Sign up now</a>
                                 </p>
                             </div>
                         </div>
