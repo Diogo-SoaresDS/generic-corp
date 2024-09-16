@@ -20,11 +20,10 @@ export default function RememberMe() {
                 <label className="relative cursor-pointer w-14 h-7 rounded-full bg-gray-100 shadow-inner" htmlFor="toggle" tabIndex={0} onKeyDown={handleKeyDown}>
                     <input 
                         className="sr-only peer" type="checkbox" name="toggle" id="toggle"
-                        aria-label="Switch to remember me"
-                        aria-labelledby="switch-label"
+                        aria-label="Remember me toggle switch"
                         tabIndex={-1}
                     />
-                    <span className={twMerge("block w-5 h-5 bg-slate-50 absolute top-1 left-1 rounded-full peer-checked:bg-blue-500 peer-checked:translate-x-7 transition-transform duration-300 ease-in-out shadow-md", isChecked ? 'bg-blue-500 translate-x-7' : '')} role="switch" aria-checked={isChecked}></span>
+                    <span className={twMerge("block w-5 h-5 bg-slate-50 absolute top-1 left-1 rounded-full peer-checked:bg-blue-500 peer-checked:translate-x-7 transition-transform duration-300 ease-in-out shadow-md", isChecked ? 'bg-blue-500 translate-x-7' : '')} role="switch" aria-checked={isChecked} aria-labelledby="switch-label"></span>
                 </label>
                 <p id="switch-label">Remember Me</p>
             </div>
